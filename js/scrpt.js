@@ -38,3 +38,48 @@ for (let i = 0; i < bikes.length; i++) {
 console.log(`La bici con peso minore è ${lightBike.name} e pesa ${lightBike.weight} kg`);
 
 
+//SECONDO ESERCIZIO
+
+//Creo l'array di oggetti
+const teams = [
+    {
+        name: "Roma",
+        points: 0,
+        fouls: 0
+    },
+    {
+        name: "Juve",
+        points: 0,
+        fouls: 0
+    },
+    {
+        name: "Lazio",
+        points: 0,
+        fouls: 0
+    },
+    {
+        name: "Milan",
+        points: 0,
+        fouls: 0
+    },
+]
+
+console.log(teams);
+
+// Funzione numeri random
+const randomNumb = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
+// Ciclo per assegnare numeri random 
+for (let i = 0; i < teams.length; i++) {
+  teams[i].points = (randomNumb(0,50));
+  teams[i].fouls = (randomNumb(0,20));
+}
+
+// Nuovo array
+const newArray = [];
+for (let i = 0; i < teams.length; i++) {
+    newArray.push({ name: teams[i].name, fouls: teams[i].fouls});
+}
+console.log(newArray);
+
+
