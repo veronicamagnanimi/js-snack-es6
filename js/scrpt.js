@@ -78,8 +78,30 @@ for (let i = 0; i < teams.length; i++) {
 // Nuovo array
 const newArray = [];
 for (let i = 0; i < teams.length; i++) {
-    newArray.push({ name: teams[i].name, fouls: teams[i].fouls});
+    newArray.push
+    ({ name: teams[i].name, fouls: teams[i].fouls});
 }
+
+// Output
 console.log(newArray);
+
+
+// BONUS
+
+// Creo l'array originale
+const firstArray = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+console.log(firstArray);
+
+// Funzione con tre paramentri
+function arrayFunction (array, a, b) {
+    const secondArray = [];
+
+    for (let i = a; i <= b; i++) {
+        secondArray[secondArray.length] = array[i];
+    }
+    return secondArray;
+    console.log(secondArray(array, a, b));
+}
+
 
 
